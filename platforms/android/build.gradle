@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.1'
+        classpath 'com.android.tools.build:gradle:0.10.+'
     }
 }
 
@@ -83,7 +83,7 @@ def getVersionCodeFromManifest() {
 }
 
 def getProjectList() {
-    def manifestFile = file("project.ㅁproperties")
+    def manifestFile = file("project.properties")
     def pattern = Pattern.compile("android.library.reference.(\\d+)\\s*=\\s*(.*)")
     def matcher = pattern.matcher(manifestFile.getText())
     def projects = []
